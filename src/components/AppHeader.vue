@@ -30,8 +30,10 @@ onUnmounted(() => observer?.disconnect());
 <template>
   <header class="header">
     <a class="brand" href="#top" aria-label="返回首页" @click="closeMenu">
-      <span class="brand__mark">L</span>
-      <span>丽丽 · DIGITAL STUDIO</span>
+      <span class="brand__mark" aria-hidden="true">✦</span>
+      <span class="brand__text"
+        ><strong>丽丽 · STUDIO</strong><small>Web · Design · AI</small></span
+      >
     </a>
 
     <button
@@ -52,6 +54,12 @@ onUnmounted(() => observer?.disconnect());
       :class="{ 'nav--open': menuOpen }"
       aria-label="主导航"
     >
+      <a
+        href="#top"
+        :class="{ 'is-active': activeSection === 'top' }"
+        @click="closeMenu"
+        >首页</a
+      >
       <a
         href="#services"
         :class="{ 'is-active': activeSection === 'services' }"
@@ -80,7 +88,7 @@ onUnmounted(() => observer?.disconnect());
         @click="closeMenu"
         >合作流程</a
       >
-      <a class="nav__contact" href="#contact" @click="closeMenu">聊聊需求 ↗</a>
+      <a class="nav__contact" href="#contact" @click="closeMenu">立即咨询 →</a>
     </nav>
   </header>
 </template>

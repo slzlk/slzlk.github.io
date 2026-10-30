@@ -1,8 +1,8 @@
 <template>
   <section id="about" class="section about">
     <div class="section-heading">
-      <p class="section-kicker"><span>04</span> ABOUT LILI</p>
-      <h2>你好，我是丽丽。<br />关心代码，也关心体验。</h2>
+      <p class="section-kicker">ABOUT ME</p>
+      <h2>关于我</h2>
     </div>
 
     <div class="about__content">
@@ -15,6 +15,7 @@
         开发交付与上线维护。近期聚焦 AI 智能助手，实践流式响应、富文本内容
         渲染与复杂对话交互。
       </p>
+      <a class="about__more button" href="#experience">认识更多的我 →</a>
       <div class="about__focus" aria-label="技术方向">
         <span>Vue3</span>
         <span>TypeScript</span>

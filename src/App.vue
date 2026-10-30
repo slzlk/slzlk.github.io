@@ -34,10 +34,10 @@ onUnmounted(() => {
     <AppHeader />
     <main>
       <HeroSection />
-      <ServicesSection />
-      <FeaturedCaseSection />
       <ProjectsSection />
+      <ServicesSection />
       <AboutSection />
+      <FeaturedCaseSection />
       <ExperienceSection />
       <ProcessSection />
       <TechStackSection />

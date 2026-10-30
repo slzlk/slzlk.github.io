@@ -36,3 +36,20 @@ npm run preview
 - `src/components/ProjectsSection.vue`、`ExperienceSection.vue`：原站项目和经历内容。
 - `src/components/ContactSection.vue`：真实邮箱和复制交互。
 - `src/App.vue`：区块顺序；`index.html`：标题、描述和主题色。
+
+## 参考图方向调整（2026-10-30）
+
+- 首屏采用暖色桌面场景、左侧大标题和四类服务入口，背景是 AI 生成的装饰素材。
+- 精选作品前置，桌面四列、手机两列；卡片展开显示原有项目职责。
+- 项目缩略图由代码绘制并标注为内容示意，不代表实际产品截图；不使用参考图里的虚构项目或人物身份。
+- 服务改为紧凑横向图标卡片，关于我改为横幅；保留详细案例、经历与联系区。
+- 未加入客户评价、50+ 项目或 100% 等未经确认的数据。
+- 通过类型检查与生产构建，检查桌面和 390px 手机布局、卡片展开及手机菜单；浏览器未记录错误或警告。
+
+### 首屏素材
+
+使用内置 image_gen 生成；原图保留在 Codex 生成目录，网站使用 JPEG 压缩版本 `public/images/studio-hero.jpg`（约 181 KB）。这是装饰性工作室场景，不是真实工作室或客户项目证明。
+
+生成提示词：
+
+> Use case: photorealistic-natural. Generate a premium website hero background, wide landscape 1536x1024 or wider. Warm cream minimalist independent web developer studio, sunlit ivory desk with an elegant open dark slim laptop angled gently toward camera on RIGHT HALF, phone upright beside it, white tulips in ceramic vase behind, a few ivory books and notebook, linen curtains, soft morning sunlight and shadows, muted caramel accents. LEFT 45% almost empty softly lit ivory wall/desk with minimal detail to overlay live website text. Laptop screen shows an abstract elegant cream website layout with flower photo and fine brown lines, phone screen corresponding layout. No readable text, no logos, no people. Photorealistic editorial interior product photography, sophisticated natural texture, not illustration, no watermark. This is a decorative studio scene, not a real project screenshot.

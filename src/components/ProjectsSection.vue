@@ -41,10 +41,10 @@ const projects = [
   <section id="projects" class="section projects">
     <div class="section-heading section-heading--row">
       <div>
-        <p class="section-kicker"><span>03</span> SELECTED WORK</p>
+        <p class="section-kicker">FEATURED WORKS</p>
         <h2>精选作品</h2>
       </div>
-      <p>从 AI 对话到交易平台，<br />用稳定工程承载复杂业务。</p>
+      <p>不同的想法，相同的用心。<br />这里是我参与过的真实项目。</p>
     </div>
 
     <div class="projects__grid">

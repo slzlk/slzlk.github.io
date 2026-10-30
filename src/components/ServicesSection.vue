@@ -38,10 +38,10 @@ const services = [
   <section id="services" class="section services">
     <div class="section-heading section-heading--row">
       <div>
-        <p class="section-kicker"><span>01</span> WHAT I CAN DO</p>
-        <h2>你的想法，<br />值得被认真实现。</h2>
+        <p class="section-kicker">SERVICES</p>
+        <h2>定制服务</h2>
       </div>
-      <p>从一张个人主页，到一个业务应用。<br />一起找到适合你的实现方式。</p>
+      <p>从想法到落地，提供更贴合你需求的解决方案。</p>
     </div>
     <div class="services__grid">
       <a
@@ -60,7 +60,7 @@ const services = [
         <h3>{{ service.title }}</h3>
         <i>{{ service.subtitle }}</i>
         <p>{{ service.text }}</p>
-        <small>{{ service.tags }}</small>
+        <small>咨询定制 →</small>
       </a>
     </div>
     <p class="services__note">
