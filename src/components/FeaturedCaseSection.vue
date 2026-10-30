@@ -31,7 +31,7 @@ const selectPanel = (key: string | number) => {
 <template>
   <section id="featured" class="section featured">
     <div class="featured__heading">
-      <p class="section-kicker"><span>03</span> FEATURED CASE</p>
+      <p class="section-kicker"><span>02</span> FEATURED CASE</p>
       <p class="featured__label">AI APPLICATION · 2025</p>
       <h2>让大模型的回答，<br />成为自然流畅的产品体验。</h2>
       <p>
@@ -62,6 +62,7 @@ const selectPanel = (key: string | number) => {
     </div>
 
     <div class="featured__demo" aria-label="AI 智能助手界面示意">
+      <p class="demo-caption">交互界面示意 · 非产品截图</p>
       <div class="phone">
         <div class="phone__bar">
           <span>美丽秘寻</span>

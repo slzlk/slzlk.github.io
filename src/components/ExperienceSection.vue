@@ -31,10 +31,10 @@ const experiences = [
   <section id="experience" class="section experience">
     <div class="section-heading">
       <div>
-        <p class="section-kicker"><span>02</span> EXPERIENCE</p>
+        <p class="section-kicker"><span>↳</span> EXPERIENCE</p>
         <h2>在真实业务里，<br />持续积累判断力。</h2>
       </div>
-      <p class="experience__intro">8 年 · 4 段经历 · 多端产品研发</p>
+      <p class="experience__intro">Web · H5 · 小程序 · App</p>
     </div>
     <div class="experience__list">
       <article v-for="item in experiences" :key="item.period">

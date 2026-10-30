@@ -41,8 +41,8 @@ const projects = [
   <section id="projects" class="section projects">
     <div class="section-heading section-heading--row">
       <div>
-        <p class="section-kicker"><span>04</span> MORE WORK</p>
-        <h2>更多项目</h2>
+        <p class="section-kicker"><span>03</span> SELECTED WORK</p>
+        <h2>精选作品</h2>
       </div>
       <p>从 AI 对话到交易平台，<br />用稳定工程承载复杂业务。</p>
     </div>

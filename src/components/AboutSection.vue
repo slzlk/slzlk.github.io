@@ -1,8 +1,8 @@
 <template>
   <section id="about" class="section about">
     <div class="section-heading">
-      <p class="section-kicker"><span>01</span> ABOUT ME</p>
-      <h2>不只是写页面，<br />更关心产品如何抵达用户。</h2>
+      <p class="section-kicker"><span>04</span> ABOUT LILI</p>
+      <h2>你好，我是丽丽。<br />关心代码，也关心体验。</h2>
     </div>
 
     <div class="about__content">

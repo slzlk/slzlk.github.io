@@ -2,29 +2,30 @@
   <section id="top" class="hero section">
     <div class="hero__eyebrow reveal">
       <span class="status-dot"></span>
-      HELLO / 你好
+      INDEPENDENT DEVELOPER / 个人开发者
     </div>
 
     <div class="hero__content">
       <div class="hero__copy">
-        <p class="hero__name reveal reveal--delay-1">Hi,</p>
+        <p class="hero__name reveal reveal--delay-1">Hello, I’m Lili.</p>
         <h1 class="reveal reveal--delay-2">
-          我是宋丽
-          <span>高级前端开发工程师</span>
+          我是丽丽，
+          <span>让想法，自然发生。</span>
         </h1>
         <p class="hero__intro reveal reveal--delay-3">
-          8 年前端经验，专注 Vue 与跨端应用开发。<br />
-          正在把 AI 能力，做成真实、自然、好用的产品体验。
+          专注个人网站、H5、小程序与 AI 智能体接入。<br />
+          用细腻的界面与可靠的开发，把想法变成好用的产品。
         </p>
         <div class="hero__tags reveal reveal--delay-3" aria-label="专业方向">
-          <span>Vue 3</span><span>UniApp</span><span>AI 应用</span><span>多端研发</span>
+          <span>网站定制</span><span>H5 开发</span><span>AI 应用</span
+          ><span>小程序</span>
         </div>
         <div class="hero__actions reveal reveal--delay-4">
           <a class="button button--primary" href="#projects">
             查看作品
             <span aria-hidden="true">↘</span>
           </a>
-          <a class="button button--ghost" href="#experience">了解经历</a>
+          <a class="button button--ghost" href="#contact">咨询定制 ↗</a>
         </div>
       </div>
 
@@ -32,16 +33,18 @@
         <div class="hero__halo" aria-hidden="true"></div>
         <div class="profile-card">
           <div class="profile-card__top">
-            <span>NOW</span>
-            <i>AI APPLICATION</i>
+            <span>LILI / DIGITAL CRAFT</span>
+            <i>DESIGN & DEVELOPMENT</i>
           </div>
-          <div class="profile-card__monogram" aria-hidden="true">SL</div>
-          <p>FRONTEND × AI</p>
-          <strong>让技术复杂度留在幕后，<br />把简单体验交给用户。</strong>
+          <div class="profile-card__monogram" aria-hidden="true">
+            Ll<small>made with care</small>
+          </div>
+          <p>THOUGHTFULLY BUILT.</p>
+          <strong>留一点温度，<br />给每一个数字体验。</strong>
         </div>
-        <span class="float-chip float-chip--one">SSE 流式对话</span>
-        <span class="float-chip float-chip--two">跨端交付</span>
-        <span class="float-chip float-chip--three">8 YEARS</span>
+        <span class="float-chip float-chip--one">从想法到上线</span>
+        <span class="float-chip float-chip--two">Web · Mini Program</span>
+        <span class="float-chip float-chip--three">FRONTEND × AI</span>
       </div>
     </div>
 

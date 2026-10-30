@@ -13,9 +13,10 @@ defineProps<{
   <article class="project-card" :class="`project-card--${accent}`">
     <div class="project-card__top">
       <span class="project-card__index">{{ index }}</span>
-      <span class="project-card__arrow" aria-hidden="true">↗</span>
+      <span class="project-card__caption">项目经历</span>
     </div>
     <div class="project-card__visual" aria-hidden="true">
+      <span class="project-card__visual-label">{{ tags.slice(0, 2).join(" / ") }}</span>
       <div class="project-card__window">
         <span></span><span></span><span></span>
       </div>
