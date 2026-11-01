@@ -1,40 +1,7 @@
 <script setup lang="ts">
-import ProjectCard from './ProjectCard.vue'
+import ProjectCard from "./ProjectCard.vue";
 
-const projects = [
-  {
-    index: '01',
-    title: 'AI 智能助手',
-    description: '面向化妆品原料研发的微信小程序，完成从用户提问到模型流式回复的完整交互链路。',
-    points: ['SSE 流式输出', 'Markdown / 引用 / 图片', '历史会话与反馈'],
-    tags: ['Vue3', 'UniApp', 'SSE', 'Dify', 'Markdown'],
-    accent: 'violet' as const,
-  },
-  {
-    index: '02',
-    title: '多端租赁平台',
-    description: '覆盖 App、小程序、H5、PC 与运营后台的综合租赁交易平台。',
-    points: ['UniApp 多端交付', 'SSR 与 SEO', '商品 / 订单 / 商家业务'],
-    tags: ['Vue3', 'UniApp', 'Freemarker', 'Element Plus'],
-    accent: 'cyan' as const,
-  },
-  {
-    index: '03',
-    title: '农产品供需平台',
-    description: '农产品供需、行情与交易平台，覆盖小程序、App 和 H5。',
-    points: ['采购与供应', '拼车拼团', '订单与行情'],
-    tags: ['UniApp', 'Vue', '跨端应用'],
-    accent: 'lime' as const,
-  },
-  {
-    index: '04',
-    title: '数据可视化与业务平台',
-    description: '参与农业数据大屏、招聘与社区等业务平台的前端开发。',
-    points: ['ECharts 大屏', '权限与组件封装', '性能与适配优化'],
-    tags: ['Vue', 'ECharts', 'Element Plus', 'H5'],
-    accent: 'blue' as const,
-  },
-]
+import { projects } from "../config/site";
 </script>
 
 <template>
@@ -48,7 +15,11 @@ const projects = [
     </div>
 
     <div class="projects__grid">
-      <ProjectCard v-for="project in projects" :key="project.index" v-bind="project" />
+      <ProjectCard
+        v-for="project in projects"
+        :key="project.index"
+        v-bind="project"
+      />
     </div>
   </section>
 </template>

@@ -1,14 +1,9 @@
 <script setup lang="ts">
 import { ref } from "vue";
+import ContentDialog from "./ContentDialog.vue";
+import { emailUrl, type Project } from "../config/site";
 const open = ref(false);
-defineProps<{
-  index: string;
-  title: string;
-  description: string;
-  tags: string[];
-  accent: "violet" | "cyan" | "lime" | "blue";
-  points?: string[];
-}>();
+defineProps<Project>();
 </script>
 <template>
   <article class="project-card" :class="`project-card--${accent}`">
@@ -76,17 +71,36 @@ defineProps<{
         </div>
         <button
           type="button"
-          :aria-expanded="open"
-          :aria-controls="`project-${index}`"
-          :aria-label="`${open ? '收起' : '查看'}${title}项目职责`"
-          @click="open = !open"
+          aria-haspopup="dialog"
+          :aria-label="`查看${title}案例详情`"
+          @click="open = true"
         >
-          {{ open ? "−" : "→" }}
+          →
         </button>
       </div>
-      <ul v-if="open" :id="`project-${index}`" class="project-card__points">
-        <li v-for="point in points" :key="point">{{ point }}</li>
-      </ul>
+      <ContentDialog :open="open" :title="title" @close="open = false">
+        <p class="case-disclosure">
+          匿名项目经历 · 展示画面为内容示意，不是客户产品截图。
+        </p>
+        <div class="case-detail">
+          <h3>项目场景</h3>
+          <p>{{ context }}</p>
+          <h3>参与工作</h3>
+          <p>{{ approach }}</p>
+          <h3>功能与技术</h3>
+          <ul>
+            <li v-for="point in points" :key="point">{{ point }}</li>
+          </ul>
+          <div class="project-card__tags">
+            <span v-for="tag in tags" :key="tag">{{ tag }}</span>
+          </div>
+        </div>
+        <a
+          class="button button--primary"
+          :href="emailUrl(`咨询类似项目：${title}`)"
+          >咨询类似需求 →</a
+        >
+      </ContentDialog>
     </div>
   </article>
 </template>

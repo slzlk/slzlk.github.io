@@ -1,55 +1,41 @@
-# 丽丽 · 个人作品与定制服务
+# Cream Studio · 丽丽的个人品牌与模板项目
 
-基于原仓库 `https://github.com/slzlk/slzlk.github.io` 改版，沿用 Vue 3、TypeScript、Vite 和 GitHub Pages 部署方式。
+Vue 3 + TypeScript + Vite。当前网站用于个人展示与定制接单；独立模板包用于替换品牌后部署。
 
-## 本地使用
+## 使用
 
 ```sh
 npm ci
 npm run dev
 npm run build
 npm run preview
+npm run template:export
 ```
 
-`npm run build` 包含 `vue-tsc -b` 类型检查，产物位于 `dist/`。原有 GitHub Actions 在 `master` 推送后发布至 GitHub Pages。推送到 `master` 后，由仓库现有工作流构建并发布。
+主站配置：`src/config/site.ts`。完整替换、部署及演示说明见 [模板手册](docs/TEMPLATE-GUIDE.md)，素材见 [素材清单](docs/ASSETS.md)。
 
-## 本次改版
+## 3.0 交付内容
 
-- 页面名称统一为丽丽，采用暖米白、奶油与焦糖色、衬线标题和留白。
-- 页面顺序：个人介绍、四类定制服务、AI 案例、精选作品、关于与经历、合作流程、技术方向、联系。
-- 保留原站项目、公司、时间与职责描述；不新增客户评价、业绩或项目数量。首页不再展示统计数字。
-- AI 手机界面标为交互示意，项目装饰图不作为真实截图，项目卡片不伪装为可点击链接。
-- 联系区沿用原站公开邮箱，支持带咨询主题的邮件入口、复制邮箱和失败时手动复制提示。
-- `Fenjiu/`、`flower/`、`browers/` 历史文件保持原样；首页构建与原部署方式保持一致。
+- 删除整个任职经历模块及公司数据；关于区改为个人介绍与合作理念。
+- 首屏、服务图标、响应式导航与页面演示入口。
+- 品牌展示演示：分类作品、锚点导航与演示表单。
+- AI 助手演示：本地预设回复、逐字生成、停止、清空、键盘发送。不是已接入的模型服务。
+- 匿名项目案例详情弹窗；不虚构客户评价、业绩或真实项目截图。
+- 服务交付清单、准备资料与范围；合作步骤与 FAQ。
+- 咨询表单生成 mailto 邮件，支持复制需求，不自动收集、上传或保存表单。
+- 品牌、邮箱、主题、区块、服务、案例与 FAQ 集中配置；构建时同步网页元信息。
+- 干净模板导出：移除原站身份、邮箱与个人案例，排除 Git、历史练习与依赖目录。
 
-## 已完成检查（2026-10-30）
+## 路径与发布
 
-- `npm ci`、`npm run build`（包含类型检查）、`git diff --check` 通过。
-- 本地预览 HTTP 200；桌面与 390px 手机视口检查无横向溢出。
-- 案例切换、手机菜单展开与选中后收起、复制邮箱成功提示通过浏览器验证。
-- 浏览器未记录错误或警告；邮件链接地址和咨询主题已检查，未实际发送邮件。
+首页 `/`，两个交互演示为 `?demo=portfolio`、`?demo=assistant`。默认相对资源路径支持静态子目录。原站保留现有 GitHub Actions：推送 `master` 后构建并部署到 GitHub Pages。模板交付包不附带原站工作流与仓库身份。
 
-## 主要编辑位置
+`Fenjiu/`、`flower/`、`browers/` 原仓库历史文件保持原样，不纳入模板产品。
 
-- `src/assets/styles.css`：全站主题与响应式布局。
-- `src/components/ServicesSection.vue`：服务介绍和咨询入口。
-- `src/components/ProjectsSection.vue`、`ExperienceSection.vue`：原站项目和经历内容。
-- `src/components/ContactSection.vue`：真实邮箱和复制交互。
-- `src/App.vue`：区块顺序；`index.html`：标题、描述和主题色。
+## 销售边界
 
-## 参考图方向调整（2026-10-30）
+这是展示与接单用的前端源码模板，含两种前端演示；不包含后台、数据库、支付、真实 AI 或完整小程序。销售授权、支持范围与交易条款由卖家另行确定，本项目不会自行授予第三方转售权。
 
-- 首屏采用暖色桌面场景、左侧大标题和四类服务入口，背景是 AI 生成的装饰素材。
-- 精选作品前置，桌面四列、手机两列；卡片展开显示原有项目职责。
-- 项目缩略图由代码绘制并标注为内容示意，不代表实际产品截图；不使用参考图里的虚构项目或人物身份。
-- 服务改为紧凑横向图标卡片，关于我改为横幅；保留详细案例、经历与联系区。
-- 未加入客户评价、50+ 项目或 100% 等未经确认的数据。
-- 通过类型检查与生产构建，检查桌面和 390px 手机布局、卡片展开及手机菜单；浏览器未记录错误或警告。
+## 验证记录
 
-### 首屏素材
-
-使用内置 image_gen 生成；原图保留在 Codex 生成目录，网站使用 JPEG 压缩版本 `public/images/studio-hero.jpg`（约 181 KB）。这是装饰性工作室场景，不是真实工作室或客户项目证明。
-
-生成提示词：
-
-> Use case: photorealistic-natural. Generate a premium website hero background, wide landscape 1536x1024 or wider. Warm cream minimalist independent web developer studio, sunlit ivory desk with an elegant open dark slim laptop angled gently toward camera on RIGHT HALF, phone upright beside it, white tulips in ceramic vase behind, a few ivory books and notebook, linen curtains, soft morning sunlight and shadows, muted caramel accents. LEFT 45% almost empty softly lit ivory wall/desk with minimal detail to overlay live website text. Laptop screen shows an abstract elegant cream website layout with flower photo and fine brown lines, phone screen corresponding layout. No readable text, no logos, no people. Photorealistic editorial interior product photography, sophisticated natural texture, not illustration, no watermark. This is a decorative studio scene, not a real project screenshot.
+本轮主站构建与类型检查、独立交付副本的安装及构建、桌面和手机布局、案例弹窗开关与焦点返回、作品筛选、演示表单、需求复制、对话停止与生成中清空已经执行验证。邮件内容未实际发送。
