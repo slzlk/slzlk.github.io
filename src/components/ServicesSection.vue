@@ -1,8 +1,9 @@
 <script setup lang="ts">
+import ServiceIcon from './ServiceIcon.vue'
 const services = [
   {
     number: "01",
-    icon: "↗",
+    icon: "website",
     title: "个人网站",
     subtitle: "A space of your own",
     text: "个人主页、作品集与品牌展示，让你的风格被看见。",
@@ -10,7 +11,7 @@ const services = [
   },
   {
     number: "02",
-    icon: "✳",
+    icon: "h5",
     title: "H5 定制",
     subtitle: "Small pages, big ideas",
     text: "活动专题、产品介绍与移动页面，让内容轻巧抵达用户。",
@@ -18,7 +19,7 @@ const services = [
   },
   {
     number: "03",
-    icon: "✧",
+    icon: "assistant",
     title: "AI 智能体接入",
     subtitle: "Intelligence, made useful",
     text: "把智能助手融入网站与业务，让对话成为自然的产品体验。",
@@ -26,13 +27,13 @@ const services = [
   },
   {
     number: "04",
-    icon: "▦",
+    icon: "miniapp",
     title: "小程序定制",
     subtitle: "Closer to your users",
     text: "围绕实际业务场景，开发清晰、顺手的微信小程序。",
     tags: "UniApp / 业务交互 / 多端适配",
   },
-];
+] as const;
 </script>
 <template>
   <section id="services" class="section services">
@@ -54,9 +55,7 @@ const services = [
           <span>{{ service.number }}</span
           ><span aria-hidden="true">↗</span>
         </div>
-        <span class="service-card__icon" aria-hidden="true">{{
-          service.icon
-        }}</span>
+        <span class="service-card__icon"><ServiceIcon :name="service.icon" /></span>
         <h3>{{ service.title }}</h3>
         <i>{{ service.subtitle }}</i>
         <p>{{ service.text }}</p>

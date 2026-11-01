@@ -2193,3 +2193,56 @@ h2 {
     margin-left: auto;
   }
 }
+/* Shared original service illustrations, also used in the compact hero links. */
+.service-icon {
+  --icon-line: #a16c50;
+  --icon-fill: #ecd0bb;
+  --icon-surface: #fffaf2;
+  display: block;
+  width: 100%;
+  height: 100%;
+  overflow: visible;
+  stroke-width: 1.65;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+.service-icon__line, .service-icon__surface, .service-icon__fill { stroke: var(--icon-line); }
+.service-icon__surface { fill: var(--icon-surface); }
+.service-icon__fill { fill: var(--icon-fill); }
+.service-icon__dot { fill: var(--icon-line); }
+.service-icon__ink { fill: #685548; }
+.service-icon__eye { stroke: #fff8ec; stroke-width: 2; }
+.service-icon__shade { stroke: #dec3ac; stroke-width: 3; }
+.service-icon--h5 { --icon-fill: #efd0c2; --icon-line: #b77c65; }
+.service-icon--assistant { --icon-fill: #e8c6ad; --icon-line: #8d7967; }
+.service-icon--miniapp { --icon-fill: #dfd4bf; --icon-line: #948064; }
+.hero__service-icon {
+  display: grid;
+  place-items: center;
+  flex: 0 0 38px;
+  width: 38px;
+  height: 42px;
+}
+.hero__service-icon .service-icon { stroke-width: 2; }
+.service-card .service-card__icon {
+  width: 58px;
+  height: 64px;
+  padding: 3px;
+  border: 1px solid #eee1d3;
+  border-radius: 15px;
+  background: linear-gradient(145deg, #fffdf8, #f1e7da);
+  box-shadow: inset 0 1px 0 #fff, 0 4px 10px #79513208;
+  text-shadow: none;
+  transition: transform 200ms ease, box-shadow 200ms ease;
+}
+.service-card .service-icon { filter: drop-shadow(0 2px 1px #a7775314); }
+.service-card:nth-child(2) .service-card__icon { background: linear-gradient(145deg, #fffcf8, #f6e7df); }
+.service-card:nth-child(3) .service-card__icon { background: linear-gradient(145deg, #fffdf9, #ebe7df); }
+.service-card:nth-child(4) .service-card__icon { background: linear-gradient(145deg, #fffdf7, #ede8da); }
+.service-card:hover .service-card__icon, .service-card:focus-visible .service-card__icon { transform: translateY(-3px); box-shadow: inset 0 1px 0 #fff, 0 7px 14px #7951320e; }
+@media (max-width: 1050px) {
+  .hero__service-icon { width: 34px; height: 38px; flex-basis: 34px; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .service-card:hover .service-card__icon, .service-card:focus-visible .service-card__icon { transform: none; }
+}
