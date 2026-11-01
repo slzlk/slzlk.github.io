@@ -10,7 +10,7 @@ const experiences = [
     period: '2024.02 — 2025.05',
     company: '广东省小股科技有限公司',
     role: '前端开发工程师',
-    summary: '负责零距离租赁平台多端业务、PC 端 SSR 与运营管理后台研发。',
+    summary: '负责租赁平台的跨端业务、PC 端 SSR 与运营管理后台研发。',
   },
   {
     period: '2019.09 — 2023.12',

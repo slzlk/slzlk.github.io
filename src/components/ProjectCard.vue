@@ -23,7 +23,7 @@ defineProps<{
                 : accent === "cyan"
                   ? "RENTAL / 租赁"
                   : accent === "lime"
-                    ? "徐农荟"
+                    ? "农产品供需平台"
                     : "DATA / INSIGHT"
             }}</b
           ><span>首页　探索　关于</span>
@@ -35,7 +35,7 @@ defineProps<{
             ><em>开始对话 ↗</em>
           </div>
           <div class="mini-chat">
-            <b>✧ 美丽秘寻</b>
+            <b>✧ AI 智能助手</b>
             <p>探索原料的更多可能</p>
             <hr />
             <p>成分特性与应用方向</p>

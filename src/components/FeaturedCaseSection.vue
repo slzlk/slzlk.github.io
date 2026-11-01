@@ -35,7 +35,7 @@ const selectPanel = (key: string | number) => {
       <p class="featured__label">AI APPLICATION · 2025</p>
       <h2>让大模型的回答，<br />成为自然流畅的产品体验。</h2>
       <p>
-        美丽秘寻是一款面向化妆品原料研发领域的 AI 智能助手。
+        这是一个面向原料研发场景的 AI 智能助手项目。
         我负责核心前端链路，把流式数据、复杂内容和小程序限制，
         转化为用户可以轻松理解的对话体验。
       </p>
@@ -65,7 +65,7 @@ const selectPanel = (key: string | number) => {
       <p class="demo-caption">交互界面示意 · 非产品截图</p>
       <div class="phone">
         <div class="phone__bar">
-          <span>美丽秘寻</span>
+          <span>AI 智能助手</span>
           <i>•••</i>
         </div>
         <div class="phone__body">
